@@ -1,0 +1,43 @@
+{
+  "kind": "build_request",
+  "title": "Update Habibur Rahman Babul's photo with uploaded real portrait",
+  "projectName": "Shambhuganj Driving School",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Replace the current photo of team member Habibur Rahman Babul in the team section (used in AboutPage.tsx and HomePage.tsx) with the newly uploaded real portrait image (3-8.jpeg). Save it as a static asset at frontend/public/assets/generated/habibur-rahman-babul.png and update all references to this team member's photo accordingly.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "হাবিবুর রহমান বাবুল"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The uploaded portrait of Habibur Rahman Babul (white shirt, white background, face fully visible and centered) is displayed in the team section on both the About page and Home page.",
+        "The image file is saved at frontend/public/assets/generated/habibur-rahman-babul.png.",
+        "No other team member's photo is affected.",
+        "The image renders correctly at all viewport sizes without cropping the head."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any immutable frontend paths such as hooks or UI components.",
+    "Do not alter any other team member's photo or data.",
+    "Use the uploaded image (3-8.jpeg) as the direct source for Habibur Rahman Babul's portrait — do not generate or replace it with an AI-generated image."
+  ],
+  "nonGoals": [
+    "Changing any other content, layout, or styling on the About or Home pages.",
+    "Updating backend data models or student records.",
+    "Regenerating or editing any other team member photos."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": [
+      "Crop and optimize the uploaded portrait of a middle-aged South Asian man with grey mustache in a white shirt against a white background, face fully centered with full head visible (3-8.jpeg > habibur-rahman-babul.dim_400x500.png)"
+    ]
+  }
+}

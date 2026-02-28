@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Edit Images\n- Crop and optimize the uploaded portrait of a middle-aged South Asian man with grey mustache in a white shirt against a white background, face fully centered with full head visible (3-8.jpeg > habibur-rahman-babul.dim_400x500.png)",
+  "existing_features": [
+    {
+      "id": "feature-replace-the-current-photo-of-team-member-habibur-rahman-babul-in-the-team-section-used-in-aboutpage-tsx-and-homepage-tsx-with-the-newly-uploaded-real-portrait-image-3-8-jpeg-save-it-as-a-static-asset-at-frontend-public-assets-generated-habibur-rahman-babul-png-and-update-all-references-to-this-team-member-s-photo-accordingly",
+      "title": "Replace the current photo of team member Habibur Rahman Babul in the team section (used in AboutPage.tsx and HomePage.tsx) with the newly uploaded real portrait image (3-8.jpeg). Save it as a static asset at frontend/public/assets/generated/habibur-rahman-babul.png and update all references to this team member's photo accordingly.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [],
+  "projectName": "Shambhuganj Driving School",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
