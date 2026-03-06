@@ -1,6 +1,6 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { Clock, Menu, Phone, X } from "lucide-react";
-import React, { useState } from "react";
+import { ChevronDown, Clock, Menu, Phone, X } from "lucide-react";
+import React, { useRef, useState } from "react";
 import { SiWhatsapp } from "react-icons/si";
 
 const navLinks = [
@@ -44,6 +44,9 @@ function BkashIcon({ size = 20 }: { size?: number }) {
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [branchDropdownOpen, setBranchDropdownOpen] = useState(false);
+  const [mobileBranchOpen, setMobileBranchOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   const isActive = (href: string) => {
@@ -253,6 +256,74 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+
+            {/* আমাদের শাখাসমূহ Dropdown */}
+            <div
+              className="relative"
+              ref={dropdownRef}
+              onMouseEnter={() => setBranchDropdownOpen(true)}
+              onMouseLeave={() => setBranchDropdownOpen(false)}
+            >
+              <button
+                type="button"
+                className="flex items-center gap-1 px-4 py-3 text-sm font-semibold transition-all duration-200 border-b-2"
+                style={{
+                  color: isActive("/rasulpur-branch")
+                    ? "oklch(0.78 0.12 75)"
+                    : "oklch(0.88 0.018 85)",
+                  borderBottomColor: isActive("/rasulpur-branch")
+                    ? "oklch(0.78 0.12 75)"
+                    : "transparent",
+                  background: branchDropdownOpen
+                    ? "oklch(0.26 0.065 240)"
+                    : "transparent",
+                }}
+                data-ocid="nav.branches.dropdown"
+              >
+                আমাদের শাখাসমূহ
+                <ChevronDown
+                  size={14}
+                  style={{
+                    transform: branchDropdownOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: "transform 0.2s",
+                  }}
+                />
+              </button>
+
+              {branchDropdownOpen && (
+                <div
+                  className="absolute top-full left-0 min-w-[200px] rounded-xl overflow-hidden z-50"
+                  style={{
+                    background: "oklch(0.18 0.065 240)",
+                    border: "1px solid oklch(0.30 0.060 240)",
+                    boxShadow: "0 8px 32px oklch(0.10 0.05 240 / 0.50)",
+                  }}
+                >
+                  <Link
+                    to="/"
+                    className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-150 hover:bg-[oklch(0.26_0.065_240)]"
+                    style={{ color: "oklch(0.88 0.018 85)" }}
+                    data-ocid="nav.branches.main.link"
+                  >
+                    🏫 শম্ভুগঞ্জ ড্রাইভিং স্কুল
+                  </Link>
+                  <div
+                    style={{ height: 1, background: "oklch(0.28 0.060 240)" }}
+                  />
+                  <Link
+                    to="/rasulpur-branch"
+                    className="flex items-center gap-2 px-4 py-3 text-sm font-semibold transition-all duration-150 hover:bg-[oklch(0.26_0.065_240)]"
+                    style={{ color: "oklch(0.88 0.018 85)" }}
+                    data-ocid="nav.branches.rasulpur.link"
+                  >
+                    📍 রসুলপুর শাখা
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link
               to="/admission"
               className="ml-auto px-5 py-2 my-1.5 rounded-lg text-sm font-bold transition-all hover:-translate-y-0.5"
@@ -275,7 +346,7 @@ export default function Header() {
               }}
               data-ocid="nav.office_login.button"
             >
-              অফিস লগইন
+              🔐 অফিস লগইন
             </a>
           </nav>
 
@@ -300,6 +371,67 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
+
+              {/* Mobile: আমাদের শাখাসমূহ collapsible */}
+              <div>
+                <button
+                  type="button"
+                  className="w-full flex items-center justify-between px-4 py-2.5 rounded-md text-sm font-semibold transition-all"
+                  style={{
+                    color: mobileBranchOpen
+                      ? "oklch(0.78 0.12 75)"
+                      : "oklch(0.88 0.018 85)",
+                    background: mobileBranchOpen
+                      ? "oklch(0.26 0.065 240)"
+                      : "transparent",
+                  }}
+                  onClick={() => setMobileBranchOpen(!mobileBranchOpen)}
+                  data-ocid="nav.branches_mobile.dropdown"
+                >
+                  <span>আমাদের শাখাসমূহ</span>
+                  <ChevronDown
+                    size={14}
+                    style={{
+                      transform: mobileBranchOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                      transition: "transform 0.2s",
+                    }}
+                  />
+                </button>
+                {mobileBranchOpen && (
+                  <div
+                    className="ml-4 flex flex-col gap-0.5 mt-0.5 rounded-lg overflow-hidden"
+                    style={{ background: "oklch(0.24 0.068 240)" }}
+                  >
+                    <Link
+                      to="/"
+                      className="px-4 py-2 text-sm font-semibold transition-all hover:bg-[oklch(0.28_0.065_240)]"
+                      style={{ color: "oklch(0.85 0.018 85)" }}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileBranchOpen(false);
+                      }}
+                      data-ocid="nav.branches_mobile.main.link"
+                    >
+                      🏫 শম্ভুগঞ্জ ড্রাইভিং স্কুল
+                    </Link>
+                    <Link
+                      to="/rasulpur-branch"
+                      className="px-4 py-2 text-sm font-semibold transition-all hover:bg-[oklch(0.28_0.065_240)]"
+                      style={{ color: "oklch(0.85 0.018 85)" }}
+                      onClick={() => {
+                        setMobileOpen(false);
+                        setMobileBranchOpen(false);
+                      }}
+                      data-ocid="nav.branches_mobile.rasulpur.link"
+                    >
+                      📍 রসুলপুর শাখা
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link
                 to="/admission"
                 className="mt-1 px-4 py-2.5 rounded-lg text-sm font-bold text-center"
@@ -324,7 +456,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 data-ocid="nav.office_login_mobile.button"
               >
-                অফিস লগইন
+                🔐 অফিস লগইন
               </a>
             </nav>
           )}

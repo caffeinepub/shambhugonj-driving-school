@@ -19,6 +19,7 @@ import DrivingLicensePage from "./pages/DrivingLicensePage";
 import GalleryPage from "./pages/GalleryPage";
 import HomePage from "./pages/HomePage";
 import PricingPage from "./pages/PricingPage";
+import RasulpurBranchPage from "./pages/RasulpurBranchPage";
 import StudentRecordsPage from "./pages/StudentRecordsPage";
 
 const queryClient = new QueryClient();
@@ -120,6 +121,12 @@ const admissionFormRoute = createRoute({
   component: AdmissionFormPage,
 });
 
+const rasulpurBranchRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/rasulpur-branch",
+  component: RasulpurBranchPage,
+});
+
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
@@ -131,6 +138,7 @@ const routeTree = rootRoute.addChildren([
   studentRecordsRoute,
   admissionRoute,
   admissionFormRoute,
+  rasulpurBranchRoute,
 ]);
 
 const router = createRouter({ routeTree });
