@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Bengali Font Setup ─── */
+html,
+body {
+  font-family: "Noto Sans Bengali", "Hind Siliguri", "Inter", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+td,
+th,
+label,
+button,
+input,
+textarea,
+select {
+  font-family: "Noto Sans Bengali", "Hind Siliguri", "Inter", sans-serif;
+}
+
+/* ─── OKLCH Color System: Deep Navy Blue + Soft Cream ─── */
+:root {
+  /* Navy Blue palette */
+  --navy-darkest: oklch(0.14 0.055 240);
+  --navy-dark: oklch(0.18 0.065 240);
+  --navy-mid: oklch(0.24 0.07 240);
+  --navy-light: oklch(0.32 0.065 240);
+  --navy-pale: oklch(0.42 0.055 240);
+
+  /* Cream palette */
+  --cream-deep: oklch(0.88 0.025 85);
+  --cream-mid: oklch(0.93 0.018 85);
+  --cream-light: oklch(0.96 0.012 85);
+  --cream-white: oklch(0.98 0.008 85);
+
+  /* Gold accent */
+  --gold: oklch(0.78 0.12 75);
+  --gold-light: oklch(0.86 0.1 75);
+  --gold-dark: oklch(0.65 0.13 75);
+
+  /* Semantic tokens */
+  --background: var(--cream-light);
+  --foreground: var(--navy-darkest);
+  --card: var(--cream-white);
+  --card-foreground: var(--navy-darkest);
+  --primary: var(--navy-dark);
+  --primary-foreground: var(--cream-white);
+  --secondary: var(--cream-mid);
+  --secondary-foreground: var(--navy-mid);
+  --muted: var(--cream-mid);
+  --muted-foreground: oklch(0.45 0.04 240);
+  --accent: var(--gold);
+  --accent-foreground: var(--navy-darkest);
+  --border: oklch(0.82 0.02 85);
+  --input: var(--cream-white);
+  --ring: var(--navy-mid);
+  --radius: 0.5rem;
+
+  /* Status */
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --success: oklch(0.55 0.15 145);
+  --warning: oklch(0.75 0.14 75);
+
+  /* Legacy aliases for compatibility */
+  --olive-dark: var(--navy-dark);
+  --olive-mid: var(--navy-mid);
+  --olive-pale: oklch(0.72 0.025 240);
+  --olive-wash: var(--cream-mid);
+  --stone-warm: var(--cream-white);
+  --shim-gold: var(--gold);
+  --popover: var(--cream-white);
+  --popover-foreground: var(--navy-darkest);
+}
+
+.dark {
+  --background: var(--navy-darkest);
+  --foreground: var(--cream-light);
+  --card: var(--navy-dark);
+  --card-foreground: var(--cream-light);
+  --primary: var(--cream-mid);
+  --primary-foreground: var(--navy-darkest);
+  --secondary: var(--navy-mid);
+  --secondary-foreground: var(--cream-light);
+  --muted: var(--navy-mid);
+  --muted-foreground: oklch(0.65 0.03 240);
+  --accent: var(--gold);
+  --accent-foreground: var(--navy-darkest);
+  --border: oklch(0.3 0.045 240);
+  --input: var(--navy-mid);
+  --ring: var(--gold);
+  --popover: var(--navy-dark);
+  --popover-foreground: var(--cream-light);
+}
+
+/* ─── Base Layer ─── */
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ─── Component Layer ─── */
+@layer components {
+  /* Navy divider accent */
+  .navy-divider {
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--gold),
+      var(--gold-light),
+      var(--gold)
+    );
+    border-radius: 2px;
+  }
+
+  /* Legacy shim-divider alias */
+  .shim-divider {
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      var(--gold),
+      var(--gold-light),
+      var(--gold)
+    );
+    border-radius: 2px;
+  }
+
+  /* Card styles */
+  .card-navy {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px oklch(0.18 0.065 240 / 0.08);
+  }
+
+  .card-premium {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px oklch(0.18 0.065 240 / 0.08);
+  }
+
+  /* Section backgrounds */
+  .section-cream {
+    background: var(--cream-light);
+  }
+
+  .section-navy {
+    background: var(--navy-dark);
+  }
+
+  .section-stone {
+    background: var(--cream-mid);
+  }
+
+  .section-olive {
+    background: var(--cream-light);
+  }
+
+  /* Price badge */
+  .price-badge-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px oklch(0.78 0.12 75 / 0.35);
+  }
+
+  /* Shadow utilities */
+  .shadow-navy {
+    box-shadow: 0 4px 16px oklch(0.18 0.065 240 / 0.18);
+  }
+
+  .shadow-navy-md {
+    box-shadow: 0 4px 20px oklch(0.18 0.065 240 / 0.22);
+  }
+
+  .shadow-navy-lg {
+    box-shadow: 0 8px 32px oklch(0.18 0.065 240 / 0.28);
+  }
+
+  .shadow-olive {
+    box-shadow: 0 4px 16px oklch(0.18 0.065 240 / 0.18);
+  }
+
+  .shadow-olive-md {
+    box-shadow: 0 4px 20px oklch(0.18 0.065 240 / 0.22);
+  }
+
+  .shadow-olive-lg {
+    box-shadow: 0 8px 32px oklch(0.18 0.065 240 / 0.28);
+  }
+
+  .shadow-card {
+    box-shadow: 0 2px 8px oklch(0.18 0.065 240 / 0.08);
+  }
+
+  .shadow-card-hover {
+    box-shadow: 0 6px 20px oklch(0.18 0.065 240 / 0.16);
+  }
+
+  /* Team card variants */
+  .team-card-1 {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+  }
+  .team-card-2 {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+  }
+  .team-card-3 {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+  }
+  .team-card-4 {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+  }
+  .team-card-5 {
+    background: var(--cream-white);
+    border: 1.5px solid var(--border);
+  }
+}

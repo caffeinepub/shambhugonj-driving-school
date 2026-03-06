@@ -1,0 +1,20 @@
+// Shared gallery images data
+export const galleryImages = [
+  "/assets/01.jpeg",
+  "/assets/02.jpeg",
+  "/assets/3.jpeg",
+  "/assets/FB_IMG_1770189588543.jpg",
+  "/assets/FB_IMG_1770189544503.jpg",
+  "/assets/FB_IMG_1770189556187.jpg",
+  "/assets/FB_IMG_1770189539764.jpg",
+  "/assets/FB_IMG_1770189560006.jpg",
+  "/assets/FB_IMG_1770189522713.jpg",
+  "/assets/FB_IMG_1770189563793.jpg",
+  "/assets/FB_IMG_1770189532635.jpg",
+  "/assets/FB_IMG_1770189581553.jpg",
+  "/assets/FB_IMG_1770189573755.jpg",
+  "/assets/FB_IMG_1770189568309.jpg",
+  "/assets/Admision Form.jpeg",
+  "/assets/leflet.jpeg",
+  "/assets/Team Mamber.final.png",
+];
