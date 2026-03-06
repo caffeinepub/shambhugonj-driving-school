@@ -1,5 +1,6 @@
-// Shared gallery images data
+// Shared gallery images data — only real training/activity photos (no duplicates)
 export const galleryImages = [
+  // Original gallery set — real training photos
   "/assets/01.jpeg",
   "/assets/02.jpeg",
   "/assets/3.jpeg",
@@ -14,7 +15,37 @@ export const galleryImages = [
   "/assets/FB_IMG_1770189581553.jpg",
   "/assets/FB_IMG_1770189573755.jpg",
   "/assets/FB_IMG_1770189568309.jpg",
-  "/assets/Admision Form.jpeg",
-  "/assets/leflet.jpeg",
-  "/assets/Team Mamber.final.png",
+  // Additional uploaded photos — series 1
+  "/assets/1.jpeg",
+  "/assets/1-1.jpeg",
+  "/assets/1-2.jpeg",
+  "/assets/1-3.jpeg",
+  // Series 3 (additional)
+  "/assets/3-1.jpeg",
+  "/assets/3-2.jpeg",
+  "/assets/3-3.jpeg",
+  "/assets/3-4.jpeg",
+  "/assets/3-5.jpeg",
+  "/assets/3-6.jpeg",
+  "/assets/3-7.jpeg",
+  "/assets/3-8.jpeg",
+  // Series 4
+  "/assets/4.jpeg",
+  "/assets/4-1.jpeg",
+  "/assets/4-2.jpeg",
+  "/assets/4-3.jpeg",
+  "/assets/4-4.jpeg",
+  "/assets/4-5.jpeg",
+  // Series 5
+  "/assets/5.jpeg",
+  "/assets/5-1.jpeg",
+  "/assets/5-2.jpeg",
+  "/assets/5-3.jpeg",
+  "/assets/5-4.jpeg",
+  "/assets/5-5.jpeg",
+  // Series 6
+  "/assets/6.jpeg",
+  "/assets/6-1.jpeg",
+  "/assets/6-2.jpeg",
+  "/assets/6-3.jpeg",
 ];

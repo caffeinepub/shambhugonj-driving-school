@@ -168,19 +168,20 @@ export default function AdmissionFormPage() {
     "w-full px-4 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 transition-all duration-150";
   const inputStyle = {
     background: "var(--cream-white)",
-    borderColor: "oklch(0.72 0.040 240)",
+    borderColor: "oklch(0.55 0.060 240)",
     color: "var(--navy-darkest)",
   };
   const inputFocusRingStyle = "focus:ring-navy-mid";
 
-  const labelClass = "block text-sm font-semibold mb-1.5";
-  const labelStyle = { color: "var(--navy-dark)" };
+  const labelClass = "block font-bold mb-1.5";
+  const labelStyle = { color: "var(--navy-darkest)", fontSize: "0.9rem" };
 
   const sectionHeadingClass =
     "text-lg font-extrabold mb-4 pb-2 border-b-2 flex items-center gap-2";
   const sectionHeadingStyle = {
     color: "var(--navy-dark)",
     borderColor: "var(--gold)",
+    fontSize: "1.1rem",
   };
 
   return (
@@ -204,20 +205,33 @@ export default function AdmissionFormPage() {
           />
         </div>
         <h1
-          className="text-2xl sm:text-3xl font-extrabold leading-tight mb-1"
+          className="text-2xl sm:text-3xl font-extrabold leading-tight mb-2"
           style={{ color: "var(--navy-dark)" }}
         >
           শম্ভুগঞ্জ ড্রাইভিং স্কুল
         </h1>
-        <p
-          className="text-sm font-medium mb-1"
-          style={{ color: "var(--navy-mid)" }}
+        <div
+          className="inline-block px-5 py-3 rounded-xl text-sm font-bold mt-2 mb-4 text-center"
+          style={{
+            background: "oklch(0.93 0.022 85)",
+            border: "2px solid oklch(0.78 0.12 75)",
+            color: "oklch(0.18 0.065 240)",
+            boxShadow: "0 2px 10px oklch(0.78 0.12 75 / 0.15)",
+          }}
         >
-          গণপ্রজাতন্ত্রী বাংলাদেশ সরকার অনুমোদিত ড্রাইভিং প্রশিক্ষণ কেন্দ্র
-        </p>
-        <p className="text-xs mb-4" style={{ color: "oklch(0.45 0.040 240)" }}>
-          নিবন্ধন নম্বর: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
-        </p>
+          <div
+            className="font-bold"
+            style={{ color: "oklch(0.18 0.065 240)", fontSize: "0.9rem" }}
+          >
+            গণপ্রজাতন্ত্রী বাংলাদেশ সরকার অনুমোদিত ড্রাইভিং প্রশিক্ষণ কেন্দ্র
+          </div>
+          <div
+            className="font-semibold mt-1"
+            style={{ color: "oklch(0.35 0.055 240)", fontSize: "0.8rem" }}
+          >
+            নিবন্ধন নম্বর: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
+          </div>
+        </div>
         <div className="shim-divider w-32 mx-auto mb-5" />
         <h2
           className="text-xl sm:text-2xl font-extrabold mb-3"
@@ -240,7 +254,7 @@ export default function AdmissionFormPage() {
           className="rounded-2xl overflow-hidden shadow-navy-lg"
           style={{
             background: "var(--cream-white)",
-            border: "1.5px solid oklch(0.72 0.040 240)",
+            border: "1.5px solid oklch(0.55 0.060 240)",
             borderTop: "5px solid var(--navy-dark)",
           }}
         >
@@ -313,7 +327,7 @@ export default function AdmissionFormPage() {
                           ...inputStyle,
                           borderColor: errors.studentName
                             ? "var(--destructive)"
-                            : "oklch(0.72 0.040 240)",
+                            : "oklch(0.55 0.060 240)",
                         }}
                         placeholder="পূর্ণ নাম লিখুন"
                         value={formData.studentName}
@@ -436,7 +450,7 @@ export default function AdmissionFormPage() {
                           ...inputStyle,
                           borderColor: errors.mobileNumber
                             ? "var(--destructive)"
-                            : "oklch(0.72 0.040 240)",
+                            : "oklch(0.55 0.060 240)",
                         }}
                         placeholder="01XXXXXXXXX"
                         value={formData.mobileNumber}
@@ -577,7 +591,7 @@ export default function AdmissionFormPage() {
                                 : "var(--cream-white)",
                               borderColor: isSelected
                                 ? "var(--navy-dark)"
-                                : "oklch(0.72 0.040 240)",
+                                : "oklch(0.55 0.060 240)",
                               color: isSelected
                                 ? "var(--cream-white)"
                                 : "var(--navy-darkest)",

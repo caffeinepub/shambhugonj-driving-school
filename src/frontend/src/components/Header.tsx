@@ -324,6 +324,19 @@ export default function Header() {
               )}
             </div>
 
+            <a
+              href="https://shobhuj-drive-hub.lovable.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 text-sm font-semibold transition-all duration-200 border-b-2"
+              style={{
+                color: "oklch(0.88 0.018 85)",
+                borderBottomColor: "transparent",
+              }}
+              data-ocid="nav.office_login.link"
+            >
+              অফিস লগইন
+            </a>
             <Link
               to="/admission"
               className="ml-auto px-5 py-2 my-1.5 rounded-lg text-sm font-bold transition-all hover:-translate-y-0.5"
@@ -334,20 +347,6 @@ export default function Header() {
             >
               ভর্তি হন
             </Link>
-            <a
-              href="https://shobhuj-drive-hub.lovable.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 px-5 py-2 my-1.5 rounded-lg text-sm font-bold transition-all hover:-translate-y-0.5"
-              style={{
-                background: "oklch(0.38 0.12 145)",
-                color: "oklch(0.97 0.010 85)",
-                border: "1.5px solid oklch(0.55 0.14 145)",
-              }}
-              data-ocid="nav.office_login.button"
-            >
-              🔐 অফিস লগইন
-            </a>
           </nav>
 
           {/* Mobile nav */}
@@ -432,6 +431,17 @@ export default function Header() {
                 )}
               </div>
 
+              <a
+                href="https://shobhuj-drive-hub.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 rounded-md text-sm font-semibold transition-all"
+                style={{ color: "oklch(0.88 0.018 85)" }}
+                onClick={() => setMobileOpen(false)}
+                data-ocid="nav.office_login_mobile.link"
+              >
+                অফিস লগইন
+              </a>
               <Link
                 to="/admission"
                 className="mt-1 px-4 py-2.5 rounded-lg text-sm font-bold text-center"
@@ -443,21 +453,6 @@ export default function Header() {
               >
                 ভর্তি হন
               </Link>
-              <a
-                href="https://shobhuj-drive-hub.lovable.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-1 px-4 py-2.5 rounded-lg text-sm font-bold text-center"
-                style={{
-                  background: "oklch(0.38 0.12 145)",
-                  color: "oklch(0.97 0.010 85)",
-                  border: "1.5px solid oklch(0.55 0.14 145)",
-                }}
-                onClick={() => setMobileOpen(false)}
-                data-ocid="nav.office_login_mobile.button"
-              >
-                🔐 অফিস লগইন
-              </a>
             </nav>
           )}
         </div>

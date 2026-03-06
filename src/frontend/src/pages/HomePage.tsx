@@ -169,15 +169,16 @@ export default function HomePage() {
           <div className="max-w-2xl">
             {/* Approval badge */}
             <div
-              className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-1.5 rounded-full mb-6"
+              className="inline-flex items-center gap-2 text-sm font-bold px-5 py-2.5 rounded-xl mb-6"
               style={{
-                background: "oklch(0.88 0.025 85 / 0.15)",
-                color: "oklch(0.88 0.025 85)",
-                border: "1px solid oklch(0.78 0.12 75 / 0.60)",
-                backdropFilter: "blur(4px)",
+                background: "oklch(0.88 0.025 85 / 0.18)",
+                color: "oklch(0.95 0.015 85)",
+                border: "1.5px solid oklch(0.78 0.12 75 / 0.70)",
+                backdropFilter: "blur(6px)",
+                textShadow: "0 1px 4px oklch(0.14 0.055 240 / 0.5)",
               }}
             >
-              <Shield size={13} />
+              <Shield size={15} />
               গণপ্রজাতন্ত্রী বাংলাদেশ সরকার অনুমোদিত
             </div>
 
@@ -309,15 +310,27 @@ export default function HomePage() {
                 দায়িত্বশীল ড্রাইভার তৈরি করা।
               </p>
               <div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold mt-4"
                 style={{
-                  background: "oklch(0.88 0.025 85)",
+                  background: "oklch(0.93 0.022 85)",
                   color: "oklch(0.18 0.065 240)",
-                  border: "1.5px solid oklch(0.78 0.12 75)",
+                  border: "2px solid oklch(0.78 0.12 75)",
+                  boxShadow: "0 2px 12px oklch(0.78 0.12 75 / 0.15)",
                 }}
               >
-                <Shield size={15} style={{ color: "oklch(0.78 0.12 75)" }} />
-                নিবন্ধন নম্বর: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
+                <Shield
+                  size={16}
+                  style={{ color: "oklch(0.65 0.13 75)", flexShrink: 0 }}
+                />
+                <span>
+                  <span
+                    className="block text-xs font-semibold"
+                    style={{ color: "oklch(0.35 0.055 240)" }}
+                  >
+                    গণপ্রজাতন্ত্রী বাংলাদেশ সরকার কর্তৃক অনুমোদিত
+                  </span>
+                  নিবন্ধন নম্বর: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
+                </span>
               </div>
             </div>
 
@@ -399,9 +412,20 @@ export default function HomePage() {
                     : "1.5px solid oklch(0.82 0.020 85)",
                   boxShadow: course.popular
                     ? "0 8px 32px oklch(0.18 0.065 240 / 0.25)"
-                    : "0 2px 12px oklch(0.18 0.065 240 / 0.08)",
+                    : "0 4px 20px oklch(0.18 0.065 240 / 0.12)",
                 }}
               >
+                {/* Gold top accent line for non-popular cards */}
+                {!course.popular && (
+                  <div
+                    style={{
+                      height: "3px",
+                      background:
+                        "linear-gradient(90deg, oklch(0.78 0.12 75), oklch(0.86 0.10 75))",
+                    }}
+                  />
+                )}
+
                 {/* Popular badge */}
                 {course.badge && (
                   <div className="absolute top-0 left-0 right-0 flex justify-center">
@@ -440,11 +464,14 @@ export default function HomePage() {
 
                   {/* Title */}
                   <h3
-                    className="font-extrabold text-base mb-3 leading-snug"
+                    className="font-extrabold mb-3"
                     style={{
                       color: course.popular
                         ? "oklch(0.96 0.012 85)"
                         : "oklch(0.18 0.065 240)",
+                      fontSize: "1rem",
+                      lineHeight: "1.4",
+                      letterSpacing: "0.01em",
                     }}
                   >
                     {course.titleBn}
@@ -712,6 +739,8 @@ export default function HomePage() {
                       className="w-full h-full object-cover"
                       style={{ objectPosition: member.objectPosition }}
                       onError={() => handleImgError(member.id)}
+                      loading="lazy"
+                      decoding="async"
                     />
                   )}
                 </div>

@@ -6,34 +6,35 @@ import {
   FileText,
   FolderOpen,
   Phone,
+  Shield,
 } from "lucide-react";
 import React from "react";
 
 const services = [
   {
     step: "০১",
-    icon: <FileText size={24} />,
+    icon: <FileText size={26} />,
     titleBn: "লার্নার লাইসেন্স",
     titleEn: "Learner License",
     desc: "বিআরটিএ থেকে লার্নার লাইসেন্স পেতে সম্পূর্ণ সহায়তা প্রদান করা হয়।",
   },
   {
     step: "০২",
-    icon: <CreditCard size={24} />,
+    icon: <CreditCard size={26} />,
     titleBn: "স্মার্ট কার্ড ড্রাইভিং লাইসেন্স",
     titleEn: "Smart Card Driving License",
     desc: "স্মার্ট কার্ড ড্রাইভিং লাইসেন্স আবেদন ও প্রসেসিং সহায়তা।",
   },
   {
     step: "০৩",
-    icon: <Building2 size={24} />,
+    icon: <Building2 size={26} />,
     titleBn: "বিআরটিএ সহায়তা",
     titleEn: "BRTA Support",
     desc: "ড্রাইভিং লাইসেন্স প্রসেসিং এর জন্য সম্পূর্ণ বিআরটিএ সহায়তা।",
   },
   {
     step: "০৪",
-    icon: <FolderOpen size={24} />,
+    icon: <FolderOpen size={26} />,
     titleBn: "ফাইল প্রসেসিং",
     titleEn: "File Processing",
     desc: "সব ধরনের লাইসেন্স সংক্রান্ত ফাইল প্রসেসিং দ্রুত ও নির্ভরযোগ্যভাবে।",
@@ -43,18 +44,56 @@ const services = [
 export default function DrivingLicensePage() {
   return (
     <main>
-      {/* Header */}
-      <section className="py-14" style={{ background: "var(--olive-dark)" }}>
+      {/* ── Header ── */}
+      <section className="py-16" style={{ background: "var(--olive-dark)" }}>
         <div className="max-w-7xl mx-auto px-4 text-center">
+          {/* Main heading — clear, bold, easy to read */}
           <h1
-            className="text-3xl sm:text-4xl font-extrabold mb-3"
-            style={{ color: "oklch(0.96 0.015 95)" }}
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 tracking-tight"
+            style={{
+              color: "oklch(0.97 0.015 95)",
+              textShadow: "0 2px 12px oklch(0.10 0.04 240 / 0.50)",
+              letterSpacing: "-0.01em",
+            }}
           >
             ড্রাইভিং লাইসেন্স সেবা
           </h1>
-          <div className="shim-divider w-24 mx-auto mb-4" />
+          {/* Gold underline divider */}
+          <div
+            className="w-28 h-1.5 mx-auto mb-5 rounded-full"
+            style={{
+              background:
+                "linear-gradient(90deg, oklch(0.78 0.12 75), oklch(0.86 0.10 75), oklch(0.78 0.12 75))",
+            }}
+          />
+
+          {/* Highlighted authority badges */}
+          <div className="flex flex-wrap justify-center gap-3 mb-4">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
+              style={{
+                background: "oklch(0.78 0.12 75 / 0.18)",
+                color: "oklch(0.92 0.025 85)",
+                border: "1.5px solid oklch(0.78 0.12 75 / 0.70)",
+              }}
+            >
+              <Shield size={14} style={{ color: "oklch(0.78 0.12 75)" }} />
+              বাংলাদেশ সরকার প্রশিক্ষণ কেন্দ্র
+            </span>
+            <span
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
+              style={{
+                background: "oklch(0.78 0.12 75 / 0.18)",
+                color: "oklch(0.92 0.025 85)",
+                border: "1.5px solid oklch(0.78 0.12 75 / 0.70)",
+              }}
+            >
+              নিবন্ধন নাম্বার: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
+            </span>
+          </div>
+
           <p
-            className="text-sm max-w-xl mx-auto"
+            className="text-sm max-w-xl mx-auto mt-2"
             style={{ color: "oklch(0.80 0.030 100)" }}
           >
             লার্নার লাইসেন্স থেকে স্মার্ট কার্ড পর্যন্ত সম্পূর্ণ সহায়তা
@@ -62,49 +101,78 @@ export default function DrivingLicensePage() {
         </div>
       </section>
 
-      {/* Services */}
+      {/* ── Services in box layout ── */}
       <section className="py-16 section-olive">
         <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2
+              className="text-xl sm:text-2xl font-extrabold mb-2"
+              style={{ color: "var(--olive-dark)" }}
+            >
+              আমাদের সেবাসমূহ
+            </h2>
+            <div className="shim-divider w-20 mx-auto" />
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {services.map((service) => (
               <div
                 key={service.titleBn}
-                className="card-premium p-6 flex flex-col"
+                className="flex flex-col rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  background: "var(--card)",
+                  border: "2px solid oklch(0.78 0.12 75 / 0.55)",
+                  borderRadius: "16px",
+                  boxShadow:
+                    "0 4px 24px oklch(0.78 0.12 75 / 0.12), 0 1px 6px oklch(0.18 0.065 240 / 0.08)",
+                }}
               >
+                {/* Gold top accent bar */}
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center mb-4"
                   style={{
-                    background: "var(--olive-wash)",
-                    color: "var(--olive-mid)",
-                    border: "1.5px solid var(--olive-pale)",
+                    height: "4px",
+                    background:
+                      "linear-gradient(90deg, oklch(0.78 0.12 75), oklch(0.86 0.10 75))",
                   }}
-                >
-                  {service.icon}
+                />
+                <div className="p-6 flex flex-col flex-1">
+                  {/* Step number */}
+                  <div
+                    className="text-2xl font-extrabold mb-3"
+                    style={{ color: "oklch(0.78 0.12 75)" }}
+                  >
+                    {service.step}
+                  </div>
+                  {/* Icon */}
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center mb-4"
+                    style={{
+                      background: "var(--olive-wash)",
+                      color: "var(--olive-mid)",
+                      border: "1.5px solid var(--olive-pale)",
+                    }}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3
+                    className="font-bold text-base mb-1 leading-snug"
+                    style={{ color: "var(--olive-dark)" }}
+                  >
+                    {service.titleBn}
+                  </h3>
+                  <p
+                    className="text-xs font-medium mb-3"
+                    style={{ color: "var(--muted-foreground)" }}
+                  >
+                    {service.titleEn}
+                  </p>
+                  <p
+                    className="text-sm leading-relaxed mt-auto"
+                    style={{ color: "var(--foreground)" }}
+                  >
+                    {service.desc}
+                  </p>
                 </div>
-                <div
-                  className="text-2xl font-extrabold mb-2"
-                  style={{ color: "var(--shim-gold)" }}
-                >
-                  {service.step}
-                </div>
-                <h3
-                  className="font-bold text-sm mb-1"
-                  style={{ color: "var(--olive-dark)" }}
-                >
-                  {service.titleBn}
-                </h3>
-                <p
-                  className="text-xs mb-1"
-                  style={{ color: "var(--muted-foreground)" }}
-                >
-                  {service.titleEn}
-                </p>
-                <p
-                  className="text-xs leading-relaxed mt-2"
-                  style={{ color: "var(--foreground)" }}
-                >
-                  {service.desc}
-                </p>
               </div>
             ))}
           </div>
@@ -112,13 +180,17 @@ export default function DrivingLicensePage() {
           {/* License images */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <div
-              className="rounded-xl overflow-hidden shadow-olive"
-              style={{ border: "2px solid var(--olive-pale)" }}
+              className="rounded-2xl overflow-hidden"
+              style={{
+                border: "2px solid oklch(0.78 0.12 75 / 0.45)",
+                boxShadow: "0 4px 20px oklch(0.78 0.12 75 / 0.10)",
+              }}
             >
               <img
                 src="/assets/generated/driving-license-card.dim_300x200.jpg"
                 alt="বিআরটিএ ড্রাইভিং লাইসেন্স কার্ড"
                 className="w-full h-48 object-cover"
+                loading="lazy"
               />
               <div className="p-4" style={{ background: "var(--card)" }}>
                 <p
@@ -136,13 +208,17 @@ export default function DrivingLicensePage() {
               </div>
             </div>
             <div
-              className="rounded-xl overflow-hidden shadow-olive"
-              style={{ border: "2px solid var(--olive-pale)" }}
+              className="rounded-2xl overflow-hidden"
+              style={{
+                border: "2px solid oklch(0.78 0.12 75 / 0.45)",
+                boxShadow: "0 4px 20px oklch(0.78 0.12 75 / 0.10)",
+              }}
             >
               <img
                 src="/assets/generated/car-training.dim_400x300.jpg"
                 alt="ড্রাইভিং প্রশিক্ষণ"
                 className="w-full h-48 object-cover"
+                loading="lazy"
               />
               <div className="p-4" style={{ background: "var(--card)" }}>
                 <p
@@ -163,7 +239,7 @@ export default function DrivingLicensePage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ── CTA ── */}
       <section className="py-14" style={{ background: "var(--olive-mid)" }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2

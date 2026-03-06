@@ -58,17 +58,18 @@ export default function GalleryPage() {
       {/* ── Gallery Grid ── */}
       <section className="py-16" style={{ background: "oklch(0.96 0.012 85)" }}>
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {galleryImages.map((src, index) => (
               <button
                 type="button"
                 key={src}
-                className="relative group rounded-xl overflow-hidden cursor-pointer w-full"
+                className="relative group rounded-2xl overflow-hidden cursor-pointer w-full"
                 style={{
                   border: "1.5px solid oklch(0.82 0.020 85)",
-                  boxShadow: "0 2px 12px oklch(0.18 0.065 240 / 0.08)",
+                  boxShadow:
+                    "0 2px 16px oklch(0.18 0.065 240 / 0.09), 0 1px 4px oklch(0.18 0.065 240 / 0.05)",
                   aspectRatio: "4/3",
-                  background: "none",
+                  background: "oklch(0.90 0.012 85)",
                   padding: 0,
                 }}
                 onClick={() => openLightbox(index)}
@@ -79,6 +80,7 @@ export default function GalleryPage() {
                   alt={`প্রশিক্ষণ ছবি ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
+                  decoding="async"
                 />
                 {/* Hover overlay */}
                 <div

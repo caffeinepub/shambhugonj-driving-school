@@ -130,9 +130,20 @@ export default function CoursesPage() {
                     : "1.5px solid oklch(0.82 0.020 85)",
                   boxShadow: course.popular
                     ? "0 8px 32px oklch(0.18 0.065 240 / 0.30)"
-                    : "0 2px 12px oklch(0.18 0.065 240 / 0.08)",
+                    : "0 4px 20px oklch(0.18 0.065 240 / 0.12)",
                 }}
               >
+                {/* Gold top accent line for non-popular cards */}
+                {!course.popular && (
+                  <div
+                    style={{
+                      height: "3px",
+                      background:
+                        "linear-gradient(90deg, oklch(0.78 0.12 75), oklch(0.86 0.10 75))",
+                    }}
+                  />
+                )}
+
                 {/* Popular badge */}
                 {course.badge && (
                   <div className="absolute top-0 left-0 right-0 flex justify-center">
@@ -171,11 +182,14 @@ export default function CoursesPage() {
 
                   {/* Title */}
                   <h2
-                    className="font-extrabold text-base mb-3 leading-snug"
+                    className="font-extrabold mb-3"
                     style={{
                       color: course.popular
                         ? "oklch(0.96 0.012 85)"
                         : "oklch(0.18 0.065 240)",
+                      fontSize: "1rem",
+                      lineHeight: "1.4",
+                      letterSpacing: "0.01em",
                     }}
                   >
                     {course.titleBn}

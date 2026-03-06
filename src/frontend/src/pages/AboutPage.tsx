@@ -143,13 +143,18 @@ export default function AboutPage() {
             </div>
             <div className="flex justify-center">
               <div
-                className="rounded-xl overflow-hidden shadow-olive"
-                style={{ border: "2px solid var(--olive-pale)" }}
+                className="rounded-xl overflow-hidden shadow-olive w-full max-w-sm"
+                style={{
+                  border: "2px solid var(--olive-pale)",
+                  aspectRatio: "4/3",
+                }}
               >
                 <img
                   src="/assets/6-4.jpeg"
                   alt="প্রধান প্রশিক্ষক মোঃ শহিদুল ইসলাম"
-                  className="w-full h-48 object-cover object-top"
+                  className="w-full h-full object-cover object-center"
+                  style={{ objectPosition: "center top" }}
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -220,8 +225,9 @@ export default function AboutPage() {
                   <img
                     src={member.image}
                     alt={`${member.nameEn} - ${member.positionEn}, Shambhugonj Driving School`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     style={{ objectPosition: member.objectPosition }}
+                    loading="lazy"
                   />
                 </div>
                 <h3

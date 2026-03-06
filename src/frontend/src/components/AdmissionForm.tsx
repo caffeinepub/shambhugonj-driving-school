@@ -4,10 +4,10 @@ import { useState } from "react";
 import { useActor } from "../hooks/useActor";
 
 const courseOptions = [
-  { value: "car-30", label: "কার ড্রাইভিং - ৩০ দিন (৳৩,৫০০)" },
-  { value: "car-60", label: "কার ড্রাইভিং - ৬০ দিন (৳৫,০০০)" },
-  { value: "motorcycle-30", label: "মোটরসাইকেল - ৩০ দিন (৳২,৫০০)" },
-  { value: "motorcycle-60", label: "মোটরসাইকেল - ৬০ দিন (৳৩,৫০০)" },
+  { value: "car-30", label: "কার ড্রাইভিং - ৩০ দিন" },
+  { value: "car-60", label: "কার ড্রাইভিং - ৬০ দিন" },
+  { value: "motorcycle-30", label: "মোটরসাইকেল - ৩০ দিন" },
+  { value: "motorcycle-60", label: "মোটরসাইকেল - ৬০ দিন" },
 ];
 
 const inputStyle: React.CSSProperties = {
