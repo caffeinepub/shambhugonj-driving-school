@@ -99,55 +99,111 @@ export default function AboutPage() {
       </section>
 
       {/* About content */}
-      <section className="py-16 section-stone">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-            <div>
+      <section className="py-16" style={{ background: "#f0f4f8" }}>
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            {/* Text content */}
+            <div
+              className="rounded-2xl p-7 sm:p-9"
+              style={{
+                background: "#ffffff",
+                border: "1.5px solid #d1dce8",
+                boxShadow: "0 4px 24px rgba(30,58,138,0.08)",
+              }}
+            >
               <h2
-                className="text-2xl font-extrabold mb-3"
-                style={{ color: "oklch(0.12 0.045 240)" }}
+                className="text-2xl sm:text-3xl font-extrabold mb-1 leading-snug"
+                style={{ color: "#1e3a8a" }}
               >
-                আমাদের পরিচয়
+                আমাদের সম্পর্কে
               </h2>
-              <div className="shim-divider w-20 mb-4" />
+              <div
+                className="h-1 w-16 rounded-full mb-5"
+                style={{ background: "#D4AF37" }}
+              />
+
+              {/* Tagline */}
               <p
-                className="text-sm leading-relaxed mb-4"
-                style={{ color: "oklch(0.22 0.045 240)" }}
+                className="text-base font-bold mb-4"
+                style={{ color: "#1e3a8a" }}
               >
-                মোঃ শহিদুল ইসলাম বিআরটিএ অনুমোদিত চালক প্রশিক্ষক। শম্ভুগঞ্জ ড্রাইভিং স্কুলে
-                কার ও মোটরসাইকেল চালনার প্রশিক্ষণ দেওয়া হয়। আমরা লার্নার লাইসেন্স ও স্মার্ট কার্ড
-                ড্রাইভিং লাইসেন্স পেতে সহায়তা করি।
+                নিরাপদ সড়কের জন্য চাই দক্ষ চালক।
               </p>
+
+              {/* Para 1 */}
               <p
-                className="text-sm leading-relaxed mb-6"
-                style={{ color: "oklch(0.22 0.045 240)" }}
+                className="text-sm leading-7 mb-4"
+                style={{ color: "#1a2740" }}
               >
-                আমাদের লক্ষ্য হলো প্রতিটি শিক্ষার্থীকে নিরাপদ ও দক্ষ চালক হিসেবে গড়ে তোলা।
-                আমরা বিশ্বাস করি দক্ষ চালকরাই পারে সড়ক দুর্ঘটনা কমাতে।
+                শম্ভুগঞ্জ ড্রাইভিং স্কুল একটি বিশ্বস্ত ও দায়িত্বশীল ড্রাইভিং প্রশিক্ষণ প্রতিষ্ঠান।
+                আমাদের মূল লক্ষ্য হলো সড়ক নিরাপত্তা নিশ্চিত করার জন্য দক্ষ, সচেতন এবং
+                দায়িত্বশীল চালক তৈরি করা।
               </p>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+
+              {/* Para 2 */}
+              <p
+                className="text-sm leading-7 mb-4"
+                style={{ color: "#1a2740" }}
+              >
+                আমি মোঃ শহিদুল ইসলাম, বাংলাদেশ সড়ক পরিবহন কর্তৃপক্ষ (BRTA) কর্তৃক অনুমোদিত
+                একজন সার্টিফাইড ড্রাইভিং ইনস্ট্রাক্টর। আমার ড্রাইভিং ইনস্ট্রাক্টর লাইসেন্স নম্বর:{" "}
+                <span className="font-semibold" style={{ color: "#1e3a8a" }}>
+                  আইএলএল নং ০৯০/২৪
+                </span>
+                ।
+              </p>
+
+              {/* Para 3 */}
+              <p
+                className="text-sm leading-7 mb-4"
+                style={{ color: "#1a2740" }}
+              >
+                বিআরটিএ সংক্রান্ত বিভিন্ন কার্যক্রমে আমার দীর্ঘদিনের অভিজ্ঞতা রয়েছে এবং
+                দীর্ঘদিন ধরে আমি সড়ক নিরাপত্তা ও ড্রাইভিং প্রশিক্ষণ নিয়ে কাজ করে আসছি।
+              </p>
+
+              {/* Para 4 */}
+              <p
+                className="text-sm leading-7 mb-4"
+                style={{ color: "#1a2740" }}
+              >
+                আমাদের শম্ভুগঞ্জ ড্রাইভিং স্কুল থেকে প্রশিক্ষণ নিয়ে অনেক শিক্ষার্থী সফলতার সাথে
+                দেশে ও বিদেশে ড্রাইভিং পেশায় নিয়োজিত রয়েছে।
+              </p>
+
+              {/* Para 5 */}
+              <p className="text-sm leading-7" style={{ color: "#1a2740" }}>
+                আমাদের লক্ষ্য প্রতিটি শিক্ষার্থীকে একজন দক্ষ, সচেতন এবং দায়িত্বশীল চালক
+                হিসেবে গড়ে তোলা, যাতে তারা নিরাপদভাবে গাড়ি চালাতে পারে এবং সড়ক দুর্ঘটনা কমাতে
+                গুরুত্বপূর্ণ ভূমিকা রাখতে পারে।
+              </p>
+
+              {/* Features */}
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-6">
                 {features.map((f) => (
                   <li
                     key={f}
                     className="flex items-center gap-2 text-sm"
-                    style={{ color: "oklch(0.22 0.045 240)" }}
+                    style={{ color: "#1a2740" }}
                   >
                     <CheckCircle
                       size={15}
-                      style={{ color: "oklch(0.65 0.13 75)", flexShrink: 0 }}
+                      style={{ color: "#D4AF37", flexShrink: 0 }}
                     />
                     {f}
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="flex justify-center">
+
+            {/* Image */}
+            <div className="flex justify-center md:justify-start md:sticky md:top-28">
               <div
-                className="rounded-xl overflow-hidden shadow-olive w-full max-w-xs"
+                className="rounded-xl overflow-hidden w-full max-w-xs"
                 style={{
-                  border: "2.5px solid oklch(0.78 0.12 75)",
+                  border: "2.5px solid #D4AF37",
                   aspectRatio: "3/4",
-                  boxShadow: "0 8px 32px oklch(0.18 0.065 240 / 0.18)",
+                  boxShadow: "0 8px 32px rgba(30,58,138,0.15)",
                 }}
               >
                 <img
