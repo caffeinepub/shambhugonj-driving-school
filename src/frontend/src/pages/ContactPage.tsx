@@ -67,8 +67,8 @@ export default function ContactPage() {
             }}
           />
           <p
-            className="text-sm max-w-xl mx-auto"
-            style={{ color: "oklch(0.72 0.020 85)" }}
+            className="text-sm max-w-xl mx-auto font-medium"
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             আমাদের সাথে যোগাযোগ করুন
           </p>
@@ -127,7 +127,7 @@ export default function ContactPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-1"
-                    style={{ color: "oklch(0.72 0.020 85)" }}
+                    style={{ color: "oklch(0.92 0.010 85)" }}
                   >
                     প্রধান মোবাইল
                   </div>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-1"
-                    style={{ color: "oklch(0.72 0.020 85)" }}
+                    style={{ color: "oklch(0.92 0.010 85)" }}
                   >
                     অফিস নম্বর
                   </div>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-1"
-                    style={{ color: "oklch(0.72 0.020 85)" }}
+                    style={{ color: "oklch(0.92 0.010 85)" }}
                   >
                     অফিস সময়
                   </div>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-1"
-                    style={{ color: "oklch(0.72 0.020 85)" }}
+                    style={{ color: "oklch(0.92 0.010 85)" }}
                   >
                     ঠিকানা
                   </div>
@@ -308,7 +308,7 @@ export default function ContactPage() {
                   </p>
                   <p
                     className="text-sm"
-                    style={{ color: "oklch(0.40 0.040 240)" }}
+                    style={{ color: "oklch(0.25 0.045 240)" }}
                   >
                     আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।
                   </p>
@@ -330,8 +330,11 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="contact-name"
-                        className="block text-xs font-semibold mb-1.5"
-                        style={{ color: "oklch(0.24 0.070 240)" }}
+                        className="block text-xs mb-1.5"
+                        style={{
+                          color: "oklch(0.14 0.055 240)",
+                          fontWeight: 700,
+                        }}
                       >
                         নাম *
                       </label>
@@ -346,8 +349,8 @@ export default function ContactPage() {
                         className="w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-all"
                         style={{
                           background: "oklch(0.96 0.012 85)",
-                          border: "1.5px solid oklch(0.82 0.020 85)",
-                          color: "oklch(0.18 0.065 240)",
+                          border: "1.5px solid oklch(0.65 0.055 240)",
+                          color: "oklch(0.12 0.045 240)",
                         }}
                         placeholder="আপনার নাম"
                       />
@@ -355,8 +358,11 @@ export default function ContactPage() {
                     <div>
                       <label
                         htmlFor="contact-phone"
-                        className="block text-xs font-semibold mb-1.5"
-                        style={{ color: "oklch(0.24 0.070 240)" }}
+                        className="block text-xs mb-1.5"
+                        style={{
+                          color: "oklch(0.14 0.055 240)",
+                          fontWeight: 700,
+                        }}
                       >
                         ফোন *
                       </label>
@@ -371,8 +377,8 @@ export default function ContactPage() {
                         className="w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-all"
                         style={{
                           background: "oklch(0.96 0.012 85)",
-                          border: "1.5px solid oklch(0.82 0.020 85)",
-                          color: "oklch(0.18 0.065 240)",
+                          border: "1.5px solid oklch(0.65 0.055 240)",
+                          color: "oklch(0.12 0.045 240)",
                         }}
                         placeholder="01XXXXXXXXX"
                       />
@@ -381,8 +387,11 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-email"
-                      className="block text-xs font-semibold mb-1.5"
-                      style={{ color: "oklch(0.24 0.070 240)" }}
+                      className="block text-xs mb-1.5"
+                      style={{
+                        color: "oklch(0.14 0.055 240)",
+                        fontWeight: 700,
+                      }}
                     >
                       ইমেইল
                     </label>
@@ -396,8 +405,8 @@ export default function ContactPage() {
                       className="w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-all"
                       style={{
                         background: "oklch(0.96 0.012 85)",
-                        border: "1.5px solid oklch(0.82 0.020 85)",
-                        color: "oklch(0.18 0.065 240)",
+                        border: "1.5px solid oklch(0.65 0.055 240)",
+                        color: "oklch(0.12 0.045 240)",
                       }}
                       placeholder="example@email.com"
                     />
@@ -405,8 +414,11 @@ export default function ContactPage() {
                   <div>
                     <label
                       htmlFor="contact-message"
-                      className="block text-xs font-semibold mb-1.5"
-                      style={{ color: "oklch(0.24 0.070 240)" }}
+                      className="block text-xs mb-1.5"
+                      style={{
+                        color: "oklch(0.14 0.055 240)",
+                        fontWeight: 700,
+                      }}
                     >
                       বার্তা *
                     </label>
@@ -421,8 +433,8 @@ export default function ContactPage() {
                       className="w-full px-3 py-2.5 rounded-lg text-sm outline-none transition-all resize-none"
                       style={{
                         background: "oklch(0.96 0.012 85)",
-                        border: "1.5px solid oklch(0.82 0.020 85)",
-                        color: "oklch(0.18 0.065 240)",
+                        border: "1.5px solid oklch(0.65 0.055 240)",
+                        color: "oklch(0.12 0.045 240)",
                       }}
                       placeholder="আপনার বার্তা লিখুন..."
                     />

@@ -106,7 +106,7 @@ export default function CoursesPage() {
           />
           <p
             className="text-sm max-w-xl mx-auto"
-            style={{ color: "oklch(0.72 0.020 85)" }}
+            style={{ color: "oklch(0.90 0.012 85)" }}
           >
             সরকার অনুমোদিত প্রশিক্ষণ কোর্স — আপনার প্রয়োজন অনুযায়ী বেছে নিন
           </p>
@@ -124,13 +124,14 @@ export default function CoursesPage() {
                 style={{
                   background: course.popular
                     ? "oklch(0.18 0.065 240)"
-                    : "oklch(0.98 0.008 85)",
+                    : "oklch(0.99 0.005 85)",
                   border: course.popular
                     ? "2.5px solid oklch(0.78 0.12 75)"
                     : "1.5px solid oklch(0.82 0.020 85)",
                   boxShadow: course.popular
                     ? "0 8px 32px oklch(0.18 0.065 240 / 0.30)"
-                    : "0 4px 20px oklch(0.18 0.065 240 / 0.12)",
+                    : "0 4px 20px oklch(0.18 0.065 240 / 0.10)",
+                  transition: "box-shadow 0.2s, transform 0.2s",
                 }}
               >
                 {/* Gold top accent line for non-popular cards */}
@@ -185,8 +186,8 @@ export default function CoursesPage() {
                     className="font-extrabold mb-3"
                     style={{
                       color: course.popular
-                        ? "oklch(0.96 0.012 85)"
-                        : "oklch(0.18 0.065 240)",
+                        ? "oklch(0.97 0.008 85)"
+                        : "oklch(0.12 0.045 240)",
                       fontSize: "1rem",
                       lineHeight: "1.4",
                       letterSpacing: "0.01em",
@@ -227,7 +228,7 @@ export default function CoursesPage() {
                         style={{
                           color: course.popular
                             ? "oklch(0.82 0.018 85)"
-                            : "oklch(0.35 0.040 240)",
+                            : "oklch(0.28 0.040 240)",
                         }}
                       >
                         <CheckCircle
@@ -250,8 +251,9 @@ export default function CoursesPage() {
                       className="text-2xl font-extrabold mb-4"
                       style={{
                         color: course.popular
-                          ? "oklch(0.78 0.12 75)"
-                          : "oklch(0.18 0.065 240)",
+                          ? "oklch(0.86 0.10 75)"
+                          : "oklch(0.65 0.13 75)",
+                        transition: "color 0.2s",
                       }}
                     >
                       {course.fee}
@@ -304,7 +306,7 @@ export default function CoursesPage() {
           >
             আজই শুরু করুন
           </h2>
-          <p className="text-sm mb-6" style={{ color: "oklch(0.72 0.020 85)" }}>
+          <p className="text-sm mb-6" style={{ color: "oklch(0.90 0.012 85)" }}>
             আপনার পছন্দের কোর্সে ভর্তি হতে এখনই যোগাযোগ করুন।
           </p>
           <div className="flex flex-wrap justify-center gap-4">

@@ -91,7 +91,7 @@ export default function AboutPage() {
           <div className="shim-divider w-24 mx-auto mb-4" />
           <p
             className="text-sm max-w-xl mx-auto"
-            style={{ color: "oklch(0.80 0.030 100)" }}
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             শম্ভুগঞ্জ ড্রাইভিং স্কুল — নিরাপদ সড়কের জন্য দক্ষ চালক তৈরির প্রতিশ্রুতি
           </p>
@@ -105,14 +105,14 @@ export default function AboutPage() {
             <div>
               <h2
                 className="text-2xl font-extrabold mb-3"
-                style={{ color: "var(--olive-dark)" }}
+                style={{ color: "oklch(0.12 0.045 240)" }}
               >
                 আমাদের পরিচয়
               </h2>
               <div className="shim-divider w-20 mb-4" />
               <p
                 className="text-sm leading-relaxed mb-4"
-                style={{ color: "var(--foreground)" }}
+                style={{ color: "oklch(0.22 0.045 240)" }}
               >
                 মোঃ শহিদুল ইসলাম বিআরটিএ অনুমোদিত চালক প্রশিক্ষক। শম্ভুগঞ্জ ড্রাইভিং স্কুলে
                 কার ও মোটরসাইকেল চালনার প্রশিক্ষণ দেওয়া হয়। আমরা লার্নার লাইসেন্স ও স্মার্ট কার্ড
@@ -120,7 +120,7 @@ export default function AboutPage() {
               </p>
               <p
                 className="text-sm leading-relaxed mb-6"
-                style={{ color: "var(--foreground)" }}
+                style={{ color: "oklch(0.22 0.045 240)" }}
               >
                 আমাদের লক্ষ্য হলো প্রতিটি শিক্ষার্থীকে নিরাপদ ও দক্ষ চালক হিসেবে গড়ে তোলা।
                 আমরা বিশ্বাস করি দক্ষ চালকরাই পারে সড়ক দুর্ঘটনা কমাতে।
@@ -130,11 +130,11 @@ export default function AboutPage() {
                   <li
                     key={f}
                     className="flex items-center gap-2 text-sm"
-                    style={{ color: "var(--foreground)" }}
+                    style={{ color: "oklch(0.22 0.045 240)" }}
                   >
                     <CheckCircle
                       size={15}
-                      style={{ color: "var(--olive-mid)", flexShrink: 0 }}
+                      style={{ color: "oklch(0.65 0.13 75)", flexShrink: 0 }}
                     />
                     {f}
                   </li>
@@ -143,17 +143,18 @@ export default function AboutPage() {
             </div>
             <div className="flex justify-center">
               <div
-                className="rounded-xl overflow-hidden shadow-olive w-full max-w-sm"
+                className="rounded-xl overflow-hidden shadow-olive w-full max-w-xs"
                 style={{
-                  border: "2px solid var(--olive-pale)",
-                  aspectRatio: "4/3",
+                  border: "2.5px solid oklch(0.78 0.12 75)",
+                  aspectRatio: "3/4",
+                  boxShadow: "0 8px 32px oklch(0.18 0.065 240 / 0.18)",
                 }}
               >
                 <img
                   src="/assets/6-4.jpeg"
                   alt="প্রধান প্রশিক্ষক মোঃ শহিদুল ইসলাম"
-                  className="w-full h-full object-cover object-center"
-                  style={{ objectPosition: "center top" }}
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 15%" }}
                   loading="lazy"
                 />
               </div>
@@ -177,13 +178,13 @@ export default function AboutPage() {
               >
                 <div
                   className="text-3xl font-extrabold mb-1"
-                  style={{ color: "var(--olive-mid)" }}
+                  style={{ color: "oklch(0.65 0.13 75)" }}
                 >
                   {stat.value}
                 </div>
                 <div
                   className="text-sm font-medium"
-                  style={{ color: "var(--muted-foreground)" }}
+                  style={{ color: "oklch(0.28 0.045 240)" }}
                 >
                   {stat.label}
                 </div>
@@ -199,12 +200,12 @@ export default function AboutPage() {
           <div className="text-center mb-10">
             <h2
               className="text-2xl sm:text-3xl font-extrabold mb-2"
-              style={{ color: "var(--olive-dark)" }}
+              style={{ color: "oklch(0.12 0.045 240)" }}
             >
               আমাদের দল
             </h2>
             <div className="shim-divider w-20 mx-auto mb-3" />
-            <p className="text-sm" style={{ color: "var(--muted-foreground)" }}>
+            <p className="text-sm" style={{ color: "oklch(0.28 0.045 240)" }}>
               অভিজ্ঞ ও দক্ষ প্রশিক্ষক দল
             </p>
           </div>
@@ -232,19 +233,19 @@ export default function AboutPage() {
                 </div>
                 <h3
                   className="font-bold text-sm mb-0.5 leading-snug"
-                  style={{ color: "var(--olive-dark)" }}
+                  style={{ color: "oklch(0.12 0.045 240)" }}
                 >
                   {member.name}
                 </h3>
                 <p
                   className="text-xs font-medium mb-0.5"
-                  style={{ color: "var(--olive-mid)" }}
+                  style={{ color: "oklch(0.35 0.045 240)" }}
                 >
                   {member.positionBn}
                 </p>
                 <p
                   className="text-xs"
-                  style={{ color: "var(--muted-foreground)" }}
+                  style={{ color: "oklch(0.28 0.045 240)" }}
                 >
                   {member.positionEn}
                 </p>
@@ -270,7 +271,7 @@ export default function AboutPage() {
           </h2>
           <p
             className="text-sm leading-relaxed mb-6"
-            style={{ color: "oklch(0.88 0.020 100)" }}
+            style={{ color: "oklch(0.90 0.012 85)" }}
           >
             প্রতিটি শিক্ষার্থীকে নিরাপদ, দক্ষ ও আত্মবিশ্বাসী চালক হিসেবে গড়ে তোলাই আমাদের মূল
             লক্ষ্য। সড়ক দুর্ঘটনামুক্ত বাংলাদেশ গড়তে আমরা প্রতিশ্রুতিবদ্ধ।

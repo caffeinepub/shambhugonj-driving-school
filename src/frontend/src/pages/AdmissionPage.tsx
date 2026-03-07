@@ -21,7 +21,7 @@ export default function AdmissionPage() {
           <div className="shim-divider w-24 mx-auto mb-4" />
           <p
             className="text-sm max-w-xl mx-auto mb-6"
-            style={{ color: "oklch(0.80 0.030 100)" }}
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             নিচের ফর্মটি পূরণ করুন এবং আমরা আপনার সাথে যোগাযোগ করব
           </p>

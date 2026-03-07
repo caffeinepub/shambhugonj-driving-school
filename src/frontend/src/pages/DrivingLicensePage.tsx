@@ -53,7 +53,8 @@ export default function DrivingLicensePage() {
             style={{
               color: "oklch(0.97 0.015 95)",
               textShadow: "0 2px 12px oklch(0.10 0.04 240 / 0.50)",
-              letterSpacing: "-0.01em",
+              fontWeight: 900,
+              letterSpacing: "-0.02em",
             }}
           >
             ড্রাইভিং লাইসেন্স সেবা
@@ -72,9 +73,9 @@ export default function DrivingLicensePage() {
             <span
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
               style={{
-                background: "oklch(0.78 0.12 75 / 0.18)",
-                color: "oklch(0.92 0.025 85)",
-                border: "1.5px solid oklch(0.78 0.12 75 / 0.70)",
+                background: "oklch(0.78 0.12 75 / 0.25)",
+                color: "oklch(0.97 0.010 85)",
+                border: "1.5px solid oklch(0.78 0.12 75)",
               }}
             >
               <Shield size={14} style={{ color: "oklch(0.78 0.12 75)" }} />
@@ -83,9 +84,9 @@ export default function DrivingLicensePage() {
             <span
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold"
               style={{
-                background: "oklch(0.78 0.12 75 / 0.18)",
-                color: "oklch(0.92 0.025 85)",
-                border: "1.5px solid oklch(0.78 0.12 75 / 0.70)",
+                background: "oklch(0.78 0.12 75 / 0.25)",
+                color: "oklch(0.97 0.010 85)",
+                border: "1.5px solid oklch(0.78 0.12 75)",
               }}
             >
               নিবন্ধন নাম্বার: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
@@ -94,7 +95,7 @@ export default function DrivingLicensePage() {
 
           <p
             className="text-sm max-w-xl mx-auto mt-2"
-            style={{ color: "oklch(0.80 0.030 100)" }}
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             লার্নার লাইসেন্স থেকে স্মার্ট কার্ড পর্যন্ত সম্পূর্ণ সহায়তা
           </p>
@@ -156,19 +157,19 @@ export default function DrivingLicensePage() {
                   </div>
                   <h3
                     className="font-bold text-base mb-1 leading-snug"
-                    style={{ color: "var(--olive-dark)" }}
+                    style={{ color: "oklch(0.12 0.045 240)" }}
                   >
                     {service.titleBn}
                   </h3>
                   <p
                     className="text-xs font-medium mb-3"
-                    style={{ color: "var(--muted-foreground)" }}
+                    style={{ color: "oklch(0.28 0.045 240)" }}
                   >
                     {service.titleEn}
                   </p>
                   <p
                     className="text-sm leading-relaxed mt-auto"
-                    style={{ color: "var(--foreground)" }}
+                    style={{ color: "oklch(0.25 0.040 240)" }}
                   >
                     {service.desc}
                   </p>
@@ -201,7 +202,7 @@ export default function DrivingLicensePage() {
                 </p>
                 <p
                   className="text-xs mt-1"
-                  style={{ color: "var(--muted-foreground)" }}
+                  style={{ color: "oklch(0.30 0.045 240)" }}
                 >
                   BRTA অনুমোদিত স্মার্ট কার্ড লাইসেন্স
                 </p>
@@ -229,7 +230,7 @@ export default function DrivingLicensePage() {
                 </p>
                 <p
                   className="text-xs mt-1"
-                  style={{ color: "var(--muted-foreground)" }}
+                  style={{ color: "oklch(0.30 0.045 240)" }}
                 >
                   দ্রুত ও নির্ভরযোগ্য লাইসেন্স প্রসেসিং
                 </p>
@@ -248,10 +249,7 @@ export default function DrivingLicensePage() {
           >
             লাইসেন্স পেতে যোগাযোগ করুন
           </h2>
-          <p
-            className="text-sm mb-6"
-            style={{ color: "oklch(0.88 0.025 100)" }}
-          >
+          <p className="text-sm mb-6" style={{ color: "oklch(0.92 0.012 85)" }}>
             আমাদের অভিজ্ঞ দল আপনাকে সম্পূর্ণ সহায়তা করবে।
           </p>
           <div className="flex flex-wrap justify-center gap-4">

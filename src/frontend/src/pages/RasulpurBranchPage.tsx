@@ -5,7 +5,7 @@ export default function RasulpurBranchPage() {
   return (
     <div
       className="min-h-screen py-12 px-4"
-      style={{ backgroundColor: "#f8f9fa" }}
+      style={{ backgroundColor: "oklch(0.96 0.012 85)" }}
     >
       <div className="max-w-2xl mx-auto">
         {/* Breadcrumb */}
@@ -51,8 +51,9 @@ export default function RasulpurBranchPage() {
         <div
           className="rounded-2xl overflow-hidden shadow-lg"
           style={{
-            background: "#ffffff",
-            border: "1.5px solid oklch(0.88 0.018 240)",
+            background: "oklch(0.99 0.005 85)",
+            border: "1.5px solid oklch(0.82 0.020 85)",
+            boxShadow: "0 4px 24px oklch(0.18 0.065 240 / 0.10)",
           }}
         >
           {/* Profile photo */}
@@ -86,13 +87,13 @@ export default function RasulpurBranchPage() {
           <div className="px-8 py-8">
             <h2
               className="text-2xl font-extrabold text-center mb-1"
-              style={{ color: "oklch(0.18 0.065 240)" }}
+              style={{ color: "oklch(0.12 0.045 240)" }}
             >
               মোঃ হাফিজুল ইসলাম
             </h2>
             <p
               className="text-center text-sm font-semibold mb-6"
-              style={{ color: "oklch(0.45 0.10 145)" }}
+              style={{ color: "oklch(0.35 0.045 240)" }}
             >
               পরিচালক — রসুলপুর শাখা
             </p>
@@ -100,8 +101,8 @@ export default function RasulpurBranchPage() {
             <div
               className="rounded-xl p-5 flex flex-col gap-4"
               style={{
-                background: "oklch(0.97 0.008 240)",
-                border: "1px solid oklch(0.90 0.015 240)",
+                background: "oklch(0.96 0.012 85)",
+                border: "1px solid oklch(0.88 0.018 85)",
               }}
             >
               {/* Manager */}
@@ -141,13 +142,13 @@ export default function RasulpurBranchPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-0.5"
-                    style={{ color: "oklch(0.55 0.04 240)" }}
+                    style={{ color: "oklch(0.20 0.055 240)" }}
                   >
                     পরিচালনায়
                   </div>
                   <div
                     className="text-base font-bold"
-                    style={{ color: "oklch(0.18 0.065 240)" }}
+                    style={{ color: "oklch(0.12 0.045 240)" }}
                   >
                     মোঃ হাফিজুল ইসলাম
                   </div>
@@ -165,13 +166,13 @@ export default function RasulpurBranchPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-0.5"
-                    style={{ color: "oklch(0.55 0.04 240)" }}
+                    style={{ color: "oklch(0.20 0.055 240)" }}
                   >
                     ঠিকানা
                   </div>
                   <div
                     className="text-base font-bold"
-                    style={{ color: "oklch(0.18 0.065 240)" }}
+                    style={{ color: "oklch(0.12 0.045 240)" }}
                   >
                     রসুলপুর, মুক্তাগাছা, ময়মনসিংহ
                   </div>
@@ -189,7 +190,7 @@ export default function RasulpurBranchPage() {
                 <div>
                   <div
                     className="text-xs font-semibold mb-0.5"
-                    style={{ color: "oklch(0.55 0.04 240)" }}
+                    style={{ color: "oklch(0.20 0.055 240)" }}
                   >
                     মোবাইল
                   </div>

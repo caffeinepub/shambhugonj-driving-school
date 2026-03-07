@@ -2,10 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ─── Bengali Font Setup ─── */
+/* ─── Plus Jakarta Sans Variable Font ─── */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans[wght].woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Bengali + Latin Font Setup ─── */
 html,
 body {
-  font-family: "Noto Sans Bengali", "Hind Siliguri", "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans Bengali", "Hind Siliguri",
+    sans-serif;
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,7 +40,8 @@ button,
 input,
 textarea,
 select {
-  font-family: "Noto Sans Bengali", "Hind Siliguri", "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", "Noto Sans Bengali", "Hind Siliguri",
+    sans-serif;
 }
 
 /* ─── Typography Sharpness ─── */
@@ -44,6 +55,41 @@ h6 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.01em;
+  font-weight: 800;
+}
+
+/* ─── Contrast boost: page-header subtitle text on dark navy backgrounds ─── */
+/* These selectors target the faded subtitle paragraphs inside dark hero/header blocks */
+.page-header-subtitle {
+  color: oklch(0.88 0.018 85) !important;
+  font-weight: 500;
+}
+
+/* ─── Card label text inside dark navy info cards ─── */
+.info-card-label {
+  color: oklch(0.82 0.02 85) !important;
+  font-weight: 600;
+}
+
+/* ─── Global: bump up all overly-light muted paragraph text ─── */
+/* Targets common body text patterns that appear faded */
+p {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ensure text on dark navy sections is always readable */
+[style*="oklch(0.18 0.065 240)"] p,
+[style*="oklch(0.22 0.060 240)"] p,
+[style*="oklch(0.22 0.068 240)"] p {
+  color: oklch(0.88 0.018 85);
+}
+
+/* On light backgrounds, body text must be at minimum readable navy */
+.section-stone p,
+.section-cream p,
+.section-olive p,
+[class*="py-"] > div p {
+  color: oklch(0.22 0.045 240);
 }
 
 label,
@@ -73,6 +119,17 @@ button {
   text-align: center;
 }
 
+/* ─── Government approval card (prominent) ─── */
+.govt-approval-card {
+  background: oklch(0.97 0.008 85);
+  border: 2px solid oklch(0.78 0.12 75);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 3px 16px oklch(0.78 0.12 75 / 0.18);
+  margin-top: 1rem;
+  text-align: left;
+}
+
 /* ─── OKLCH Color System: Deep Navy Blue + Soft Cream ─── */
 :root {
   /* Navy Blue palette */
@@ -95,15 +152,15 @@ button {
 
   /* Semantic tokens */
   --background: var(--cream-light);
-  --foreground: var(--navy-darkest);
+  --foreground: oklch(0.12 0.045 240);
   --card: var(--cream-white);
-  --card-foreground: var(--navy-darkest);
+  --card-foreground: oklch(0.12 0.045 240);
   --primary: var(--navy-dark);
   --primary-foreground: var(--cream-white);
   --secondary: var(--cream-mid);
   --secondary-foreground: var(--navy-mid);
   --muted: var(--cream-mid);
-  --muted-foreground: oklch(0.45 0.04 240);
+  --muted-foreground: oklch(0.28 0.05 240);
   --accent: var(--gold);
   --accent-foreground: var(--navy-darkest);
   --border: oklch(0.82 0.02 85);

@@ -81,7 +81,7 @@ export default function PricingPage() {
           <div className="shim-divider w-24 mx-auto mb-4" />
           <p
             className="text-sm max-w-xl mx-auto"
-            style={{ color: "oklch(0.80 0.030 100)" }}
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             সাশ্রয়ী মূল্যে পেশাদার ড্রাইভিং প্রশিক্ষণ
           </p>

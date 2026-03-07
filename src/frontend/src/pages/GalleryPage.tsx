@@ -1,7 +1,10 @@
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 import type React from "react";
 import { useState } from "react";
-import { galleryImages } from "../data/galleryImages";
+import { galleryImages as rawGalleryImages } from "../data/galleryImages";
+
+// Deduplicate at runtime — prevent the same file path appearing more than once
+const galleryImages = Array.from(new Set(rawGalleryImages));
 
 export default function GalleryPage() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
@@ -35,7 +38,7 @@ export default function GalleryPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1
             className="text-3xl sm:text-4xl font-extrabold mb-3"
-            style={{ color: "oklch(0.96 0.012 85)" }}
+            style={{ color: "oklch(0.97 0.008 85)" }}
           >
             গ্যালারি
           </h1>
@@ -47,8 +50,8 @@ export default function GalleryPage() {
             }}
           />
           <p
-            className="text-sm max-w-xl mx-auto"
-            style={{ color: "oklch(0.72 0.020 85)" }}
+            className="text-sm max-w-xl mx-auto font-medium"
+            style={{ color: "oklch(0.88 0.018 85)" }}
           >
             আমাদের প্রশিক্ষণ কার্যক্রমের ছবিসমূহ
           </p>
@@ -78,7 +81,7 @@ export default function GalleryPage() {
                 <img
                   src={src}
                   alt={`প্রশিক্ষণ ছবি ${index + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center transition-transform duration-[400ms] group-hover:scale-105"
                   loading="lazy"
                   decoding="async"
                 />

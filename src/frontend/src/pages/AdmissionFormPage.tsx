@@ -241,7 +241,7 @@ export default function AdmissionFormPage() {
         </h2>
         <p
           className="text-xs sm:text-sm"
-          style={{ color: "oklch(0.40 0.045 240)" }}
+          style={{ color: "oklch(0.30 0.045 240)" }}
         >
           প্রধান মোবাইল: 01712727004 &nbsp;|&nbsp; অফিস: 01711605754 &nbsp;|&nbsp;
           অফিস সময়: সকাল ৯টা – রাত ৯টা
@@ -274,7 +274,7 @@ export default function AdmissionFormPage() {
               </h3>
               <p
                 className="text-sm mb-4"
-                style={{ color: "oklch(0.45 0.040 240)" }}
+                style={{ color: "oklch(0.30 0.045 240)" }}
               >
                 আপনাকে WhatsApp-এ পাঠানো হচ্ছে...
               </p>
@@ -716,7 +716,7 @@ export default function AdmissionFormPage() {
                   </button>
                   <p
                     className="text-center text-xs mt-3"
-                    style={{ color: "oklch(0.50 0.035 240)" }}
+                    style={{ color: "oklch(0.35 0.045 240)" }}
                   >
                     ফরম জমা দেওয়ার পর আপনাকে WhatsApp-এ পাঠানো হবে
                   </p>
@@ -728,7 +728,7 @@ export default function AdmissionFormPage() {
 
         {/* Footer note */}
         <div className="text-center mt-6 pb-4">
-          <p className="text-xs" style={{ color: "oklch(0.50 0.035 240)" }}>
+          <p className="text-xs" style={{ color: "oklch(0.35 0.045 240)" }}>
             © {new Date().getFullYear()} শম্ভুগঞ্জ ড্রাইভিং স্কুল &nbsp;|&nbsp; Built
             with <span style={{ color: "var(--destructive)" }}>♥</span> using{" "}
             <a

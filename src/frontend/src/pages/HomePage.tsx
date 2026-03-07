@@ -302,35 +302,46 @@ export default function HomePage() {
               />
               <p
                 className="text-base leading-relaxed mb-4"
-                style={{ color: "oklch(0.28 0.045 240)" }}
+                style={{ color: "oklch(0.22 0.045 240)" }}
               >
                 শম্ভুগঞ্জ ড্রাইভিং স্কুল একটি সরকার অনুমোদিত ও নিবন্ধিত ড্রাইভিং প্রশিক্ষণ
                 কেন্দ্র। আমরা সরকার নির্ধারিত ৬০ ঘণ্টার বাধ্যতামূলক প্রশিক্ষণ নিয়ম অনুসরণ করে
                 থিওরি ও প্র্যাকটিক্যাল প্রশিক্ষণ প্রদান করি। আমাদের লক্ষ্য দক্ষ, সচেতন ও
                 দায়িত্বশীল ড্রাইভার তৈরি করা।
               </p>
-              <div
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-bold mt-4"
-                style={{
-                  background: "oklch(0.93 0.022 85)",
-                  color: "oklch(0.18 0.065 240)",
-                  border: "2px solid oklch(0.78 0.12 75)",
-                  boxShadow: "0 2px 12px oklch(0.78 0.12 75 / 0.15)",
-                }}
-              >
-                <Shield
-                  size={16}
-                  style={{ color: "oklch(0.65 0.13 75)", flexShrink: 0 }}
-                />
-                <span>
+              <div className="govt-approval-card">
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    marginBottom: "0.25rem",
+                  }}
+                >
+                  <Shield
+                    size={16}
+                    style={{ color: "oklch(0.65 0.13 75)", flexShrink: 0 }}
+                  />
                   <span
-                    className="block text-xs font-semibold"
-                    style={{ color: "oklch(0.35 0.055 240)" }}
+                    style={{
+                      fontWeight: 800,
+                      fontSize: "0.9rem",
+                      color: "oklch(0.14 0.055 240)",
+                    }}
                   >
                     গণপ্রজাতন্ত্রী বাংলাদেশ সরকার কর্তৃক অনুমোদিত
                   </span>
-                  নিবন্ধন নম্বর: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
-                </span>
+                </div>
+                <div
+                  style={{
+                    fontSize: "0.85rem",
+                    fontWeight: 700,
+                    color: "oklch(0.28 0.060 240)",
+                    paddingLeft: "1.5rem",
+                  }}
+                >
+                  ড্রাইভিং প্রশিক্ষণ কেন্দ্র | নিবন্ধন নং: ময়মনঃ/ড্রাইঃপ্রশিঃস্কুল-০০১/২৬
+                </div>
               </div>
             </div>
 
@@ -391,8 +402,8 @@ export default function HomePage() {
               }}
             />
             <p
-              className="text-sm max-w-xl mx-auto"
-              style={{ color: "oklch(0.40 0.040 240)" }}
+              className="text-sm max-w-xl mx-auto font-medium"
+              style={{ color: "oklch(0.28 0.045 240)" }}
             >
               আপনার প্রয়োজন অনুযায়ী কোর্স বেছে নিন
             </p>
@@ -467,8 +478,8 @@ export default function HomePage() {
                     className="font-extrabold mb-3"
                     style={{
                       color: course.popular
-                        ? "oklch(0.96 0.012 85)"
-                        : "oklch(0.18 0.065 240)",
+                        ? "oklch(0.97 0.008 85)"
+                        : "oklch(0.12 0.045 240)",
                       fontSize: "1rem",
                       lineHeight: "1.4",
                       letterSpacing: "0.01em",
@@ -508,7 +519,7 @@ export default function HomePage() {
                         style={{
                           color: course.popular
                             ? "oklch(0.82 0.018 85)"
-                            : "oklch(0.35 0.040 240)",
+                            : "oklch(0.28 0.040 240)",
                         }}
                       >
                         <CheckCircle
@@ -531,8 +542,8 @@ export default function HomePage() {
                       className="text-xl font-extrabold mb-4"
                       style={{
                         color: course.popular
-                          ? "oklch(0.78 0.12 75)"
-                          : "oklch(0.18 0.065 240)",
+                          ? "oklch(0.86 0.10 75)"
+                          : "oklch(0.65 0.13 75)",
                       }}
                     >
                       {course.fee}
@@ -663,7 +674,7 @@ export default function HomePage() {
                   </h3>
                   <p
                     className="text-sm"
-                    style={{ color: "oklch(0.75 0.020 240)" }}
+                    style={{ color: "oklch(0.82 0.016 85)" }}
                   >
                     {facility.desc}
                   </p>
@@ -746,13 +757,13 @@ export default function HomePage() {
                 </div>
                 <h3
                   className="font-bold text-sm mb-1 leading-snug"
-                  style={{ color: "oklch(0.18 0.065 240)" }}
+                  style={{ color: "oklch(0.12 0.045 240)" }}
                 >
                   {member.name}
                 </h3>
                 <p
                   className="text-xs font-medium"
-                  style={{ color: "oklch(0.42 0.055 240)" }}
+                  style={{ color: "oklch(0.35 0.045 240)" }}
                 >
                   {member.position}
                 </p>
@@ -803,6 +814,9 @@ export default function HomePage() {
                   src={src}
                   alt={`গ্যালারি ${idx + 1}`}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  style={{ objectPosition: "center" }}
+                  loading="lazy"
+                  decoding="async"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
@@ -847,10 +861,7 @@ export default function HomePage() {
                 "linear-gradient(90deg, oklch(0.78 0.12 75), oklch(0.86 0.10 75))",
             }}
           />
-          <p
-            className="text-sm mb-8"
-            style={{ color: "oklch(0.75 0.020 240)" }}
-          >
+          <p className="text-sm mb-8" style={{ color: "oklch(0.88 0.018 85)" }}>
             দক্ষ চালক হওয়ার সুযোগ নিন। আমাদের সাথে যোগাযোগ করুন।
           </p>
           <div className="flex flex-wrap justify-center gap-4">
